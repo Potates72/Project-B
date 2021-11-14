@@ -8,6 +8,10 @@ namespace ProjectB.SceneNavigation
     {
         public Scene StartScene;
 
+        #region Editor Debugging
+        public KeyCode nextScene;
+        #endregion
+
         public void Start()
         {
             List<Scene> scenes = FindObjectsOfType<Scene>().ToList();
@@ -19,9 +23,22 @@ namespace ProjectB.SceneNavigation
             }
 
             if (StartScene)
+            {
                 SceneNavigation.SetActiveScene(StartScene);
+            }
             else
+            {
                 scenes.Find(x => x.Index == 0).SetActive(true);
+            }
+        }
+
+        public void Update()
+        {
+            if(Input.GetKeyDown(nextScene))
+            {
+
+                
+            }
         }
     }
 

@@ -8,12 +8,11 @@ namespace ProjectB.SceneNavigation
 
     public static class SceneNavigation
     {
-        
-
         private static Scene activeScene;
         private static List<Scene> scenes;
-        //public void 
 
+        private static int GetCurrentSceneIndex() { return GetActiveScene().Index; }
+        public static Scene GetActiveScene() { return activeScene; }
 
         private static void ChangeScene(Scene scene)
         {
@@ -25,10 +24,6 @@ namespace ProjectB.SceneNavigation
 
 
         public static void SetSceneList(List<Scene> sceneList) => scenes = sceneList;
-        public static Scene GetActiveScene()
-        {
-            return activeScene;
-        }
 
         public static void SetActiveScene(string name)
         {

@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartScene: {fileID: 962195497}
+  nextScene: 32
 --- !u!4 &17706884
 Transform:
   m_ObjectHideFlags: 0
