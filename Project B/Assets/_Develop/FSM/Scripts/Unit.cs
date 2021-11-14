@@ -11,14 +11,6 @@ public class Unit : MonoBehaviour
     {
         stateMachine = this.GetComponent<StateMachine>();
     }
+    
 
-    private void Start()
-    {
-        
-    }
-
-    private void Update()
-    {
-        
-    }
 }
