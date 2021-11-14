@@ -20,19 +20,21 @@ public class PlayerData
     #region Private Variables
 
     private int maxHealth;
-    [ProgressBar(0, "maxHealth", ColorGetter = "GetHealthBarColor")]
-    [SerializeField] private int health;
-    [SerializeField] private PlayerInput input;
+    [ProgressBar(0, "maxHealth", ColorGetter = "GetHealthbarColor")]
+    [SerializeField, HideInEditorMode] private int health;
+    [SerializeField, InlineEditor] private PlayerInput input;
 
     #endregion
 
     #region Functions
 
     // Constructor
-    public PlayerData(int _maxHealth)
+    public PlayerData(int _maxHealth, PlayerInput _input)
     {
         maxHealth = _maxHealth;
         health = maxHealth;
+
+        input = _input;
     }
 
     public void SetHealth(int val) => health = val;
@@ -49,15 +51,8 @@ public class PlayerData
 
     public Color GetHealthbarColor(float val)
     {
-        return Color.Lerp(Color.green, Color.red, val);
+        return Color.Lerp(Color.green, Color.red, 1 - val/maxHealth);
     }
 
     #endregion
-}
-
-[System.Serializable]
-public struct PlayerInput
-{
-    [SerializeField] public KeyCode Up, Down, Left, Right;
-    [SerializeField] public KeyCode Place;
 }

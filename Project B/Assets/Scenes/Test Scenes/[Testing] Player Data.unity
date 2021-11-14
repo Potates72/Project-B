@@ -331,20 +331,13 @@ MonoBehaviour:
   startHealth: 5
   firstPlayer:
     health: 0
-    input:
-      Up: 119
-      Down: 115
-      Left: 97
-      Right: 100
-      Place: 32
+    input: {fileID: 11400000, guid: aae629f5f36dd064e8cb137a3e1c20db, type: 2}
   secondPlayer:
     health: 0
-    input:
-      Up: 273
-      Down: 274
-      Left: 276
-      Right: 275
-      Place: 271
+    input: {fileID: 11400000, guid: aae629f5f36dd064e8cb137a3e1c20db, type: 2}
+  inputTypes:
+  - {fileID: 11400000, guid: 98f8546cdce9cca4b8a2a6cf274d22ed, type: 2}
+  - {fileID: 11400000, guid: aae629f5f36dd064e8cb137a3e1c20db, type: 2}
 --- !u!4 &1525663532
 Transform:
   m_ObjectHideFlags: 0
